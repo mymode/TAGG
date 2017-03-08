@@ -931,11 +931,11 @@ p {
   display: none;
 }
 
-.contact-submit-btn {
+.contact-btn {
+  margin-top: 15px;
   min-width: 120px;
   padding-top: 0px;
   padding-bottom: 0px;
-  float: right;
   border: 2px solid #60258e;
   background-color: transparent;
   font-family: Amble, sans-serif;
@@ -1686,7 +1686,7 @@ html.w-mod-js *[data-ix="scale-in-2"] {
     width: 100%;
     max-width: 100%;
   }
-  .contact-submit-btn {
+  .contact-btn {
     width: 100%;
   }
   .work-link-wrap {

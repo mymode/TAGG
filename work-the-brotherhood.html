@@ -210,54 +210,9 @@
         </div>
         <div class="w-col w-col-7 w-col-medium-6 contact-footer-col right">
           <div class="footer-col-inner">
-            <div class="contact-form-wrap">
-              <div class="w-form">
-                <form id="email-form" name="email-form" data-name="Email Form" action="http://underlay.herokuapp.com/api/v1/web/fcwr_form_submit" method="post">
-                  <div class="form-row form-error">
-                    <div class="form-error-msg">
-                      <div class="error-msg">You must fill in all the fields</div>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-cols">
-                      <div class="w-row">
-                        <div class="w-col w-col-6 w-col-stack">
-                          <div class="input-wrap">
-                            <input id="name-3" type="text" placeholder="Name" name="name" data-name="name" required="required" class="w-input form-control">
-                          </div>
-                        </div>
-                        <div class="w-col w-col-6 w-col-stack">
-                          <div class="input-wrap">
-                            <input id="email-2" type="text" placeholder="Email" name="email-2" data-name="Email 2" required="required" class="w-input form-control">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="input-wrap">
-                      <div class="w-embed">
-                        <textarea id="field" placeholder="Message" name="message" class="w-input form-control" rows="1" style="resize: none;" required=""></textarea>
-                        <input id="token" type="hidden" name="token" value="1a57e4496ec9c8344a22bb41d6d0f0d3">
-                        <input id="form_reference" type="hidden" name="form_reference" value="contact-us">
-                        <input id="redirect_url" type="hidden" name="redirect_url" value="contact-submit-success.html">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="w-clearfix input-wrap">
-                      <input type="submit" value="send" data-wait="Please wait..." class="w-button contact-submit-btn">
-                    </div>
-                  </div>
-                </form>
-                <div class="w-form-done">
-                  <p>Thank you! Your submission has been received!</p>
-                </div>
-                <div class="w-form-fail">
-                  <p>Oops! Something went wrong while submitting the form</p>
-                </div>
-              </div>
-            </div>
+            <h4 class="font-bold text-uppercase text-brand font-big-john">Have questions?</h4>
+            <p>Please fill out the form and we will be in touch with you as soon as possible.</p>
+            <a class="w-button contact-btn" href="https://docs.google.com/a/cleverbanana.com/forms/d/e/1FAIpQLSdcPR_JOIeRpLYt-JZhaEbR53R9R7ibh0E2gTiVB3HKhHDVPg/viewform?usp=sf_link" target="_blank">Contact Us</a>
           </div>
         </div>
       </div>
@@ -319,24 +274,6 @@
           $(this).removeClass(".v-ctrl");
           $(this).unbind();
         });
-      }
-    });
-    // dotvici form
-    $("form").on("submit", function(e){
-      var form_valid = true;
-      $(this).find(":input").each(function(){
-        if($(this).prop('required') && !$(this).val()){
-          form_valid = false;
-          $(this).addClass("has-error");
-        } else {
-          $(this).removeClass("has-error");
-        }
-      });
-      if(!form_valid) {
-        $(this).find(".form-error").show();
-        e.preventDefault();
-      } else {
-        $(this).find(".form-error").hide();
       }
     });
   </script>
