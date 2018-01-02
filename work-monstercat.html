@@ -169,7 +169,7 @@
     </div>
   </div>
   <div class="copyright">
-    <div class="copyright-text">© 2016 TAGG Creative Inc. All Rights Reserved.</div>
+    <div class="copyright-text">©<span id="current-year">2016</span> TAGG Creative Inc. All Rights Reserved.</div>
   </div>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
@@ -225,6 +225,11 @@
           $(this).unbind();
         });
       }
+    });
+
+    $(document).ready(function(){
+    	var c_year = new Date().getFullYear();
+      $("#current-year").html(c_year);
     });
   </script>
 </body>
